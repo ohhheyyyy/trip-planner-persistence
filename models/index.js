@@ -16,4 +16,4 @@ module.exports = {
   Hotel: Hotel, 
   Activity: Activity, 
   Restaurant: Restaurant
-} 
+};

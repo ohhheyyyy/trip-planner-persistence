@@ -1,6 +1,6 @@
 var router = require('express').Router();
 var Promise = require('bluebird');
-var models = require('../models')
+var models = require('../models');
 var Hotel = models.Hotel;
 var Restaurant = models.Restaurant;
 var Activity = models.Activity;
@@ -11,7 +11,7 @@ var Place = models.Place;
 //   var {Hotel, Restaurant, Activity, Place} = models;
 //
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-
+router.use('/api', require('./api'));
 router.get('/', function (req, res, next) {
   Promise.all([
     Hotel.findAll({include: Place}),
