@@ -61,12 +61,12 @@ $(function initializeMap (){
     var select = $(`#${attractionType}-choices`)
     
     attractions[attractionType].forEach(function(attraction) {
-      var option = $(`<option value="${attraction.id}">${attraction.name}</option>`)[0]
+      var option = $(`<option value="${attraction.id}">${attraction.name}</option>`)[0];
       option.attraction = attraction
-      option.attraction.place.type = attractionType
-      select.append(option)
+      option.attraction.place.type = attractionType;
+      select.append(option);
     })
-  }
+  };
 
   makeOptions('hotel');
   makeOptions('restaurant');

@@ -11,6 +11,6 @@ module.exports = function(db){
     cuisine: Sequelize.STRING
   });
   return Restaurant; 
-}
+};
 
 

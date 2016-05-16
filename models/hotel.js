@@ -11,4 +11,4 @@ module.exports = function(db){
   });
 
   return Hotel; 
-}
+};

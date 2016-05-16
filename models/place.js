@@ -9,6 +9,6 @@ module.exports = function(db){
     location: Sequelize.ARRAY(Sequelize.DOUBLE)
   });
   return Place;   
-}
+};
 
 

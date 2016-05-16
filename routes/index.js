@@ -12,20 +12,20 @@ var Place = models.Place;
 //
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 router.use('/api', require('./api'));
-router.get('/', function (req, res, next) {
-  Promise.all([
-    Hotel.findAll({include: Place}),
-    Restaurant.findAll({include: Place}),
-    Activity.findAll({include: Place})
-  ])
-  .spread(function (hotels, restaurants, activities) {
-    res.render('index', {
-      hotels: hotels,
-      restaurants: restaurants,
-      activities: activities
-    });
-  })
-  .catch(next);
+router.get('/', function(req, res, next) {
+    Promise.all([
+            Hotel.findAll({ include: Place }),
+            Restaurant.findAll({ include: Place }),
+            Activity.findAll({ include: Place })
+        ])
+        .spread(function(hotels, restaurants, activities) {
+            res.render('index', {
+                hotels: hotels,
+                restaurants: restaurants,
+                activities: activities
+            });
+        })
+        .catch(next);
 });
 
 module.exports = router;
