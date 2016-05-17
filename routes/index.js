@@ -5,6 +5,7 @@ var Hotel = models.Hotel;
 var Restaurant = models.Restaurant;
 var Activity = models.Activity;
 var Place = models.Place;
+var Day = models.Day;
 
 // OR, with ES6, you can do:
 //

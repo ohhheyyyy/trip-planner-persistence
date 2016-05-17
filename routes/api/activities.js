@@ -5,18 +5,18 @@ var Hotel = models.Hotel;
 var Restaurant = models.Restaurant;
 var Activity = models.Activity;
 var Place = models.Place;
+var Day = models.Day;
 
-
-router.get('/', function (req, res, next) {
-  Promise.all([
-    Activity.findAll({include: Place}),
-  ])
-  .spread(function (activities) {
-    res.json(activities);
-  })
-  .catch(next);
+router.get('/', function(req, res, next) {
+    Promise.all([
+            Activity.findAll({ include: Place }),
+        ])
+        .spread(function(activities) {
+            res.json(activities);
+        })
+        .catch(next);
 });
 
 
 
-module.exports=router;
+module.exports = router;
